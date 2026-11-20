@@ -1,0 +1,9 @@
+{
+  "name": "ZEN STORE — Better Life, Better You",
+  "short_name": "ZEN STORE",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f8fc",
+  "theme_color": "#061b49",
+  "icons": [{"src":"assets/images/favicon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
+}

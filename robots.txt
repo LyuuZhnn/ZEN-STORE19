@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Sitemap: https://lyuuzhnn.github.io/ZEN-STOREV3/sitemap.xml

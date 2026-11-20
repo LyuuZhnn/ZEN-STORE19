@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#061b49">
+  <meta property="og:title" content="ZEN STORE — Better Life, Better You">
+  <meta property="og:description" content="Pengalaman belanja teknologi dengan identitas Blue & Cyan.">
+  <meta property="og:image" content="assets/images/og-cover.svg">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="description" content="ZEN STORE — Better Life, Better You. Belanja perangkat gaming dan aksesoris teknologi dengan mudah.">
+  <title>ZEN STORE — Better Life, Better You</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/icons.js"></script>
+</head>
+<body>
+  <div class="announcement-bar">
+    <div class="shell announcement-inner">
+      <a class="announcement-promo" href="promo.html"><i data-lucide="megaphone"></i><span><b>Promo Spesial!</b> Cek penawaran resmi ZEN STORE!</span><i data-lucide="arrow-right"></i></a>
+      <span class="shipping-note"><i data-lucide="truck"></i> Gratis Ongkir min. pembelian Rp100.000</span>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="shell main-header">
+      <a class="brand" href="#beranda" aria-label="ZEN STORE Beranda">
+        <span class="brand-mark"><svg viewBox="0 0 54 42" aria-hidden="true"><path d="M12 3h36L24 39H0L12 3Z" fill="currentColor"/><path d="M25 3h24L38 18H15L25 3Z" fill="#55c8ff"/><path d="M28 24h22L42 39H18l10-15Z" fill="#004dbb"/></svg></span>
+        <span class="brand-copy"><strong>ZEN STORE</strong><small>Better Life, Better You</small></span>
+      </a>
+      <div class="search-wrap" id="searchWrap">
+        <i data-lucide="search"></i>
+        <input id="searchInput" type="search" placeholder="Cari produk di ZEN STORE..." autocomplete="off" aria-label="Cari produk">
+        <kbd>Ctrl + K</kbd>
+        <div class="search-results" id="searchResults" hidden></div>
+      </div>
+      <div class="header-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema" title="Ganti tema"><span class="theme-sun"><i data-lucide="sun"></i></span><span class="theme-moon"><i data-lucide="moon"></i></span></button>
+        <button class="icon-button notification-trigger" id="notificationBtn" aria-label="Notifikasi"><i data-lucide="bell"></i><b class="count-badge">0</b></button>
+        <button class="icon-button" id="wishlistTopBtn" aria-label="Wishlist"><i data-lucide="heart"></i><b class="count-badge" id="wishlistCount">0</b></button>
+        <button class="icon-button" id="cartTopBtn" aria-label="Keranjang"><i data-lucide="shopping-cart"></i><b class="count-badge" id="cartCount">0</b></button>
+        <button class="account-trigger" id="accountBtn" type="button" title="Masuk atau daftar"><span class="avatar"><i data-lucide="user-round"></i></span><span>Masuk /<br>Daftar</span><i data-lucide="chevron-down"></i></button>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Buka menu"><i data-lucide="menu"></i></button>
+    </div>
+    <nav class="nav-wrap" aria-label="Navigasi utama">
+      <div class="shell nav-inner">
+        <button class="category-btn" id="categoryBtn"><i data-lucide="grid-3x3"></i> Kategori <i data-lucide="chevron-down"></i></button>
+        <div class="nav-links" id="navLinks">
+          <a class="nav-link mobile-category-link" href="categories.html"><i data-lucide="grid-3x3"></i> Kategori</a>
+          <a class="nav-link active" href="#beranda"><i data-lucide="house"></i> Beranda</a>
+          <a class="nav-link" href="products.html"><i data-lucide="package"></i> Semua Produk</a>
+          <a class="nav-link" href="promo.html"><i data-lucide="zap"></i> Promo</a>
+          <a class="nav-link" href="tracking.html"><i data-lucide="truck"></i> Lacak Pesanan</a>
+          <a class="nav-link" href="about.html"><i data-lucide="info"></i> Tentang Kami</a>
+          <a class="nav-link" href="contact.html"><i data-lucide="mail"></i> Kontak</a>
+          <a class="nav-link" href="developer.html"><i data-lucide="code-2"></i> Developer</a>
+        </div>
+      </div>
+      <div class="category-menu" id="categoryMenu" hidden>
+        <button data-category="Semua"><i data-lucide="layout-grid"></i> Semua Produk</button>
+        <button data-category="Keyboard"><i data-lucide="keyboard"></i> Keyboard</button>
+        <button data-category="Mouse"><i data-lucide="mouse"></i> Mouse</button>
+        <button data-category="Monitor"><i data-lucide="monitor"></i> Monitor</button>
+        <button data-category="Audio"><i data-lucide="headphones"></i> Audio</button>
+        <button data-category="Headset"><i data-lucide="headphones"></i> Headset</button>
+        <button data-category="Laptop"><i data-lucide="laptop"></i> Laptop</button>
+        <button data-category="Webcam"><i data-lucide="video"></i> Webcam</button>
+        <button data-category="Microphone"><i data-lucide="mic"></i> Microphone</button>
+        <button data-category="Mousepad"><i data-lucide="layout-grid"></i> Mousepad</button>
+        <button data-category="Speaker"><i data-lucide="volume-2"></i> Speaker</button>
+        <a class="category-all-link" href="categories.html">Lihat semua kategori →</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="beranda">
+    <section class="shell hero-section" aria-label="Promosi utama">
+      <div class="hero-slider" id="heroSlider">
+        <div class="hero-track" id="heroTrack">
+          <article class="hero-slide hero-slide-one">
+            <div class="hero-copy">
+              <span class="hero-brand"><span class="mini-brand-mark">Z</span> ZEN STORE</span>
+              <h1>Better Life,<br><em>Better You</em></h1>
+              <p>Belanja lebih mudah, lebih hemat,<br>dan lebih menyenangkan hanya di ZEN STORE!</p>
+              <a class="primary-btn" href="#produk">Belanja Sekarang <i data-lucide="arrow-right"></i></a>
+            </div>
+            <div class="hero-art" aria-hidden="true">
+              <div class="hero-product-shot hero-shot-laptop"><img src="https://dlcdnwebimgs.asus.com/gain/49bac8ff-76c9-45b5-846c-057f79c30c8b/" alt="ASUS TUF Gaming A15 laptop" data-backup="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/asus/thumb/139955-1_large.jpg" loading="eager"><span>ASUS TUF Gaming A15</span></div>
+              <div class="hero-product-shot hero-shot-mouse"><img src="https://resource.logitech.com/w_544%2Ch_466%2Car_7%3A6%2Cc_pad%2Cq_auto%2Cf_auto%2Cdpr_1.0/d_transparent.gif/content/dam/logitech/en/products/mice/mx-master-3s/2025-update/mx-master-3s-bluetooth-edition-top-view-graphite-new-1.png" alt="Logitech MX Master 3S wireless mouse" data-backup="https://f00.esfr.pl/foto/2/105878971337/2980c0a350b70f9e4e64c1e4a325c63c/logitech-mysz-mx-master-3s-szara%2C105878971337_5.webp" loading="eager"><span>Logitech MX Master 3S</span></div>
+            </div>
+          </article>
+          <article class="hero-slide hero-slide-two">
+            <div class="hero-copy">
+              <span class="hero-brand"><span class="mini-brand-mark">Z</span> ZEN STORE</span>
+              <h2>Premium Shopping<br><em>Experience</em></h2>
+              <p>Temukan pengalaman belanja yang lebih nyaman,<br>modern, dan praktis di ZEN STORE.</p>
+              <a class="primary-btn" href="#produk">Jelajahi Produk <i data-lucide="arrow-right"></i></a>
+            </div><div class="hero-orbit" aria-hidden="true"><i data-lucide="gamepad-2"></i></div>
+          </article>
+          <article class="hero-slide hero-slide-three">
+            <div class="hero-copy">
+              <span class="hero-brand"><span class="mini-brand-mark">Z</span> ZEN STORE</span>
+              <h2>Special Offer<br><em>For You</em></h2>
+              <p>Nikmati penawaran pilihan yang diperbarui<br>melalui informasi promo toko.</p>
+              <a class="primary-btn" href="#promosi">Lihat Penawaran <i data-lucide="arrow-right"></i></a>
+            </div><div class="hero-orbit orbit-ticket" aria-hidden="true"><i data-lucide="tags"></i></div>
+          </article>
+          <article class="hero-slide hero-slide-four">
+            <div class="hero-copy">
+              <span class="hero-brand"><span class="mini-brand-mark">Z</span> ZEN STORE</span>
+              <h2>Make Every<br><em>Moment Better</em></h2>
+              <p>Produk teknologi pilihan, pelayanan ramah,<br>dan pengalaman belanja yang nyaman.</p>
+              <a class="primary-btn" href="#tentang">Kenali Kami <i data-lucide="arrow-right"></i></a>
+            </div><div class="hero-orbit orbit-spark" aria-hidden="true"><i data-lucide="sparkles"></i></div>
+          </article>
+        </div>
+        <button class="slider-arrow slider-prev" id="heroPrev" aria-label="Slide sebelumnya"><i data-lucide="chevron-left"></i></button>
+        <button class="slider-arrow slider-next" id="heroNext" aria-label="Slide berikutnya"><i data-lucide="chevron-right"></i></button>
+        <div class="slider-dots" id="sliderDots" aria-label="Pilih slide"></div>
+      </div>
+    </section>
+
+    <section class="shell service-grid" aria-label="Keunggulan layanan">
+      <div class="service-card"><i data-lucide="shield-check"></i><span><b>100% Produk Original</b><small>Detail keaslian dikonfirmasi toko</small></span></div>
+      <div class="service-card"><i data-lucide="zap"></i><span><b>Pengiriman Cepat</b><small>Estimasi mengikuti informasi kurir</small></span></div>
+      <div class="service-card"><i data-lucide="headset"></i><span><b>Customer Service 24/7</b><small>Ikuti kanal & jam layanan toko</small></span></div>
+      <div class="service-card"><i data-lucide="lock-keyhole"></i><span><b>Transaksi Aman</b><small>Gunakan kanal transaksi resmi</small></span></div>
+    </section>
+
+    <section class="shell promo-grid" id="promosi">
+      <article class="promo-banner flash-banner" id="flash-sale">
+        <div class="promo-symbol"><i data-lucide="tags"></i></div>
+        <div class="promo-copy"><h2>Flash Sale!</h2><p>Penawaran spesial toko</p><small id="flashCountdown">Promo aktif mengikuti pengaturan toko</small></div>
+        <a href="promo.html" class="promo-btn">Lihat Promo <i data-lucide="arrow-right"></i></a>
+        <div class="promo-decoration gift-decoration"><i data-lucide="gift"></i><b>%</b></div>
+      </article>
+      <article class="promo-banner voucher-banner" id="voucher">
+        <div class="promo-symbol"><i data-lucide="ticket-percent"></i></div>
+        <div class="promo-copy"><h2>Voucher Spesial</h2><p>Voucher & Penawaran Tambahan</p><small>Ketentuan mengikuti voucher aktif</small></div>
+        <button class="promo-btn" id="claimVoucherBtn">Ambil Voucher <i data-lucide="arrow-right"></i></button>
+        <div class="promo-decoration voucher-decoration"><span>VOUCHER</span><b>%</b></div>
+      </article>
+    </section>
+
+    <section class="shell products-section" id="produk">
+      <div class="section-heading">
+        <div><h2>Produk Pilihan</h2><p>Perangkat elektronik dan aksesori komputer pilihan untuk kebutuhanmu.</p></div>
+        <button class="outline-btn" id="showAllProducts">Lihat Semua <i data-lucide="arrow-right"></i></button>
+      </div>
+      <div class="product-grid" id="productGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="shell newsletter-section" id="newsletter">
+      <div class="newsletter-mascot" aria-hidden="true"><img src="assets/images/chibi-mascot.svg" alt=""></div>
+      <div class="newsletter-icon"><i data-lucide="mail"></i></div>
+      <div class="newsletter-copy"><h2>Berlangganan Newsletter</h2><p>Dapatkan informasi terbaru tentang promo dan produk menarik!</p></div>
+      <form class="newsletter-form" id="newsletterForm">
+        <label class="sr-only" for="newsletterEmail">Alamat email</label>
+        <input id="newsletterEmail" type="email" placeholder="Masukkan email Anda..." required>
+        <button type="submit">Berlangganan</button>
+      </form>
+      <div class="newsletter-plane" aria-hidden="true"><i data-lucide="send"></i></div>
+    </section>
+
+    <section class="shell lower-info" id="tentang">
+      <div><span class="eyebrow">ABOUT ZEN STORE</span><h2>Belanja teknologi jadi lebih mudah.</h2><p>ZEN STORE menghadirkan pilihan perangkat dan aksesori teknologi untuk menemani aktivitas, belajar, dan gaming kamu.</p></div>
+      <div class="lower-info-links" id="bantuan"><a href="help.html">Pusat Bantuan</a><a href="tracking.html">Lacak Pesanan</a><a href="contact.html">Hubungi Kami</a></div>
+    </section>
+    <footer class="site-footer" id="kontak"><div class="shell footer-columns">
+      <div class="footer-brand"><a class="brand" href="index.html"><span class="brand-mark"><svg viewBox="0 0 54 42" aria-hidden="true"><path d="M12 3h36L24 39H0L12 3Z" fill="currentColor"/><path d="M25 3h24L38 18H15L25 3Z" fill="#55c8ff"/><path d="M28 24h22L42 39H18l10-15Z" fill="#004dbb"/></svg></span><span class="brand-copy"><strong>ZEN STORE</strong><small>Better Life, Better You</small></span></a><p>Pengalaman belanja teknologi dengan tampilan Blue &amp; Cyan yang bersih dan modern.</p></div>
+      <div><b>Navigasi</b><a href="index.html">Beranda</a><a href="categories.html">Kategori</a><a href="promo.html">Promo</a><a href="bestseller.html">Produk Terlaris</a></div>
+      <div><b>Pelanggan</b><a href="login.html">Masuk / Daftar</a><a href="orders.html">Pesanan Saya</a><a href="wishlist.html">Wishlist</a><a href="cart.html">Keranjang</a></div>
+      <div><b>Bantuan</b><a href="help.html">FAQ &amp; Cara Belanja</a><a href="tracking.html">Lacak Pesanan</a><a href="contact.html">Hubungi Kami</a><a href="https://wa.me/6282221101650" target="_blank" rel="noopener noreferrer">WhatsApp</a><a href="mailto:gzberhanif@gmail.com">Email</a><a href="about.html">Tentang Kami</a></div>
+      <div><b>Informasi</b><a href="privacy.html">Kebijakan Privasi</a><a href="terms.html">Syarat &amp; Ketentuan</a><a href="developer.html">Developer Profile</a></div>
+    </div><div class="shell footer-bottom"><span>© <span id="yearNow"></span> ZEN STORE. Better Life, Better You.</span><span>Demo frontend. Harga, stok, dan pemesanan perlu dikonfirmasi toko.</span></div></footer>
+  </main>
+
+  <div class="floating-actions"><a class="float-btn whatsapp-float" id="whatsappFloat" href="https://wa.me/6282221101650" target="_blank" rel="noopener" aria-label="Hubungi WhatsApp"><i data-lucide="message-circle"></i></a><button class="float-btn top-float" id="backToTop" aria-label="Kembali ke atas"><i data-lucide="arrow-up"></i></button></div>
+
+  <div class="toast-region" id="toastRegion" aria-live="polite" aria-atomic="true"></div>
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" id="modalPanel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Tutup"><i data-lucide="x"></i></button>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <script src="assets/js/app.js"></script>
+  <script>if("serviceWorker" in navigator){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}));}</script>
+</body>
+</html>
